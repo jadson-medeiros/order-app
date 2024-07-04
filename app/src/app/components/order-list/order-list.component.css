@@ -1,0 +1,45 @@
+table {
+  width: 100%;
+}
+
+.mat-elevation-z8 {
+  margin: 20px 0;
+}
+
+.mat-column-orderItems ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.mat-header-cell,
+.mat-cell {
+  padding: 8px 16px;
+}
+
+.mat-paginator {
+  margin: 20px 0;
+}
+
+button {
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  table,
+  .mat-header-row,
+  .mat-row {
+    display: block;
+  }
+
+  .mat-header-cell,
+  .mat-cell {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .mat-header-cell {
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,81 @@
+<mat-card>
+  <h2 style="text-align: center">Edit Order</h2>
+
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap: 15px;
+    "
+  >
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Customer Name</mat-label>
+        <input
+          matInput
+          formControlName="customerName"
+          placeholder="Enter customer name"
+        />
+        <mat-error *ngIf="orderForm.get('customerName')?.hasError('required')"
+          >Customer name is required</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Customer Email</mat-label>
+        <input
+          matInput
+          formControlName="customerEmail"
+          placeholder="Enter customer email"
+        />
+        <mat-error *ngIf="orderForm.get('customerEmail')?.hasError('required')"
+          >Customer email is required</mat-error
+        >
+        <mat-error *ngIf="orderForm.get('customerEmail')?.hasError('email')"
+          >Invalid email</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Products</mat-label>
+        <mat-select formControlName="selectedProducts" multiple>
+          <mat-option *ngFor="let product of products" [value]="product.id">{{
+            product.productName
+          }}</mat-option>
+        </mat-select>
+        <mat-error
+          *ngIf="orderForm.get('selectedProducts')?.hasError('required')"
+          >Select at least one product</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Quantity</mat-label>
+        <input
+          matInput
+          formControlName="quantity"
+          type="number"
+          placeholder="Enter quantity"
+        />
+      </mat-form-field>
+
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 20px;
+        "
+      >
+        <button mat-raised-button color="primary" (click)="goBackHome()">
+          Back
+        </button>
+        <button mat-raised-button color="accent" type="submit">
+          Save Order
+        </button>
+      </div>
+    </form>
+  </div>
+</mat-card>

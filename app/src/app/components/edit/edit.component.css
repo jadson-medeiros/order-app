@@ -1,0 +1,32 @@
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.mat-card {
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mat-card h2 {
+  margin-bottom: 20px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  width: 48%;
+}
+
+.mat-error {
+  font-size: 0.875rem;
+  color: #f44336;
+}

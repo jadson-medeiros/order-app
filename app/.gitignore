@@ -1,0 +1,50 @@
+# Node artifacts
+/node_modules
+/dist
+/*.log
+/npm-debug.log*
+
+# Compiled TypeScript
+/*.js
+/*.js.map
+/*.d.ts
+
+# Dependency directories
+/jspm_packages/
+/bower_components/
+
+# System and project specific files
+/System.Web.Optimization.xml
+*.suo
+*.user
+*.sln.docstates
+
+# Visual Studio code auto generated files
+.vscode
+.angular
+
+# Mac hidden files
+.DS_Store
+
+# Visual Studio 2015/2017 cache/options directory
+.vs
+# .suo
+# .ntvs*
+*.nupkg
+*.pfx
+# NuGet Packages
+*.yml
+*.config
+
+# Others
+npm-debug.log*
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+public
+.DS_Store
