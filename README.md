@@ -20,7 +20,7 @@ This repository contains two projects: an Angular application (frontend) located
 ```sh
 docker-compose up
 ```
-This will start the API and PostgreSQL database in Docker containers.
+This will start the API and SQL Server database in Docker containers.
 
 ### Additional Configuration
 - Ensure that the database connection settings are correct in the `api/appsettings.json` file.
